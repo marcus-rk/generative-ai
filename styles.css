@@ -1,5 +1,12 @@
+/* Needed to make font work on Safari */
 @font-face {
-    font-family: "BM Hanna 11yrs Old" !important;
+    font-family: "BM HANNA 11yrs old" !important;
+    src: url("https://db.onlinewebfonts.com/t/8914c48bb6cbcf51c389da71e776340d.eot");
+    src: url("https://db.onlinewebfonts.com/t/8914c48bb6cbcf51c389da71e776340d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/8914c48bb6cbcf51c389da71e776340d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/8914c48bb6cbcf51c389da71e776340d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/8914c48bb6cbcf51c389da71e776340d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/8914c48bb6cbcf51c389da71e776340d.svg#BM HANNA 11yrs old")format("svg");
 }
 
 * {
