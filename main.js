@@ -3,10 +3,12 @@ const categoryElement = document.querySelector('#category');
 const keywordElement = document.querySelector('#keyword');
 const button = document.querySelector('button');
 const generatedContainerElement = document.querySelector('.generated-container');
-const orderedListElement = document.querySelector('ol');
+const listElement = document.querySelector('ul');
 
 button.addEventListener("click", () => {
     console.log("Button clicked!");
+
+    listElement.innerHTML = '';
 
     const ageString = `Generate three christmas gift ideas. Gift receiver age: ${ageInputElement.value}. `;
     const giftTypeString = `The gift should be a ${categoryElement.value} gift.`;
@@ -39,7 +41,7 @@ function getGiftLiElement(giftIdeaString) {
 }
 
 function renderGift(giftLiElement) {
-    orderedListElement.appendChild(giftLiElement);
+    listElement.appendChild(giftLiElement);
 }
 
 function getGiftIdeas(generatedText) {
