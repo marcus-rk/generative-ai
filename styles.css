@@ -11,7 +11,7 @@
 :root {
     --color-1: #bb010b;
     --color-2: #cd1624;
-    --color-3: #006f57;
+    --color-3: #006750;
     --color-4: #23856d;
     --color-5: #faf8f8;
 }
@@ -20,34 +20,45 @@
 /*********************************/
 /*********************************/
 
-main {
+body {
     background-color: var(--color-5);
-    width: 100%;
-    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    width: 100svw;
+}
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100svh;
 }
 
 h1 {
+    padding-top: 30px;
     font-size: 30px;
     border-bottom: 2px solid var(--color-5);
 }
 
 section {
     width: 80%;
+    height: 100%;
     background-color: var(--color-4);
-    outline: 18px solid var(--color-3);
+    border-left: 10px solid var(--color-3);
+    border-right: 10px solid var(--color-3);
+    outline: 120px dashed var(--color-2);
     color: var(--color-5);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 30px;
-    border-radius: 12px;
     gap: 20px;
-    font-size: 22px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 .input-container {
@@ -55,6 +66,48 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+label {
+    font-size: 20px;
+}
+
+input, select {
+    background-color: var(--color-5);
+    outline: none;
+    border: 5px solid var(--color-3);
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 8px;
+    font-size: 18px;
+} input::placeholder {
+      color: #000000;
+      opacity: 40%;
+  }
+
+#age {
+    width: 60px;
+}
+
+#keyword {
+    width: 240px;
+}
+
+button {
+    border: 6px solid var(--color-1);
+    border-radius: 8px;
+    background-color: var(--color-2);
+    padding: 12px;
+    font-size: 18px;
+    color: var(--color-5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+} button:hover {
+      border: 6px solid var(--color-2);
+      background-color: var(--color-1);
+  }
+
+#age, #category, #keyword, button, h2, ul {
+    margin-bottom: 20px;
 }
 
 .generated-container {
@@ -82,16 +135,23 @@ li {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-#age, #category, #keyword, button, h2 {
-    margin-bottom: 20px;
-}
-
-button {
-    width: 100px;
-}
-
 
 /* TODO: MAKE RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 800px) {
+
+    h1 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    body, main {
+        height: 100%;
+    }
+
+    section {
+        width: 75%;
+        height: 100svh;
+    }
+
 
 }

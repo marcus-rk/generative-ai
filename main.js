@@ -6,9 +6,7 @@ const generatedContainerElement = document.querySelector('.generated-container')
 const listElement = document.querySelector('ul');
 
 button.addEventListener("click", () => {
-    console.log("Button clicked!");
-
-    listElement.innerHTML = '';
+    button.innerText = "Loading...";
 
     const ageString = `Generate three christmas gift ideas. Gift receiver age: ${ageInputElement.value}. `;
     const giftTypeString = `The gift should be a ${categoryElement.value} gift.`;
@@ -18,10 +16,14 @@ button.addEventListener("click", () => {
 
     getGeneratedText(queryPrompt)
         .then(generatedText => {
+            button.innerText = "Generate";
+
             // Remove the queryPrompt from the generatedText
             const slicedGeneratedText = generatedText.slice(queryPrompt.length, generatedText.length);
 
             const giftIdeasStringArray = getGiftIdeas(slicedGeneratedText);
+
+            listElement.innerHTML = '';
 
             giftIdeasStringArray.forEach(giftIdeaString => {
                 const giftLiElement = getGiftLiElement(giftIdeaString);
@@ -29,7 +31,10 @@ button.addEventListener("click", () => {
             });
 
             generatedContainerElement.classList.remove('hidden');
-        });
+        }).catch((error) => {
+        console.log(error);
+        button.innerText = "Try again.."
+    });
 
 });
 
