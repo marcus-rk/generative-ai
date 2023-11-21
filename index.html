@@ -6,15 +6,34 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Christmas Gift Generator</title>
 </head>
 <body>
 
+<main>
+    <section>
+        <h1>Christmas Gift Generator</h1>
 
-<label for="fridge">What do you have in your fridge?</label>
-<input id="fridge" type="text">
-<button>Click here</button>
-<p class="suggestions"></p>
+        <div class="input-container">
+            <label for="age">Age of gift receiver: </label>
+            <input id="age" type="number" placeholder="Age of person..." min="0" max="120">
+            <label for="category">What category of gift: </label>
+            <select id="category">
+                <option value="personal">A personal gift</option>
+                <option value="material">A materialistic gift</option>
+                <option value="experience">An experience</option>
+            </select>
+            <label for="keyword">Gift keywords: </label>
+            <input id="keyword" type="text" placeholder="Ex. sport, gaming, make-up...">
+            <button>Generate</button>
+        </div>
+        <div class="generated-container hidden">
+            <h2>Generated Gift:</h2>
+            <ol></ol>
+        </div>
+    </section>
+</main>
+
 
 <script src="utils.js"></script>
 <script src="main.js"></script>
