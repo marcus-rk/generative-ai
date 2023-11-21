@@ -161,11 +161,15 @@ li {
     }
 
     body, main {
+        outline: none;
         height: 100%;
+        background-color: var(--color-2);
     }
 
     section {
-        width: 75%;
+        overflow: hidden;
+        outline: none;
+        width: 80%;
         height: 100svh;
     }
 
