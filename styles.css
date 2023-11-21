@@ -25,6 +25,7 @@
     --color-3: #006750;
     --color-4: #23856d;
     --color-5: #faf8f8;
+    --color-6: #171717;
 }
 
 /*********************************/
@@ -85,11 +86,12 @@ label {
 
 select {
     -webkit-appearance: none !important;
-    appearance: none !important;
+    color: var(--color-6) !important;
 }
 
 input, select {
     background-color: var(--color-5);
+    color: var(--color-6);
     outline: none;
     border: 5px solid var(--color-3);
     border-radius: 4px;
