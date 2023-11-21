@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "BM Hanna 11yrs Old", serif;
+    font-family: "BM Hanna 11yrs Old", serif !important;
 }
 
 .hidden {
