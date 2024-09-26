@@ -15,6 +15,10 @@ This project demonstrates my skills in **front-end web development** with JS, HT
 - **Dynamic AI Integration**: Utilizes **Falcon-7B** from Hugging Face to generate personalized gift ideas.
 - **Mobile-Responsive Design**: The UI is responsive, offering a seamless experience across devices.
 
+## Try It Yourself
+
+Click the link to explore the Christmas Gift Generator: [**Open Demo Here**](https://marcus-rk.github.io/generative-ai/)  
+
 <img width="499" alt="christmas-generative-ai" src="https://github.com/user-attachments/assets/47ead4f5-2711-4bcc-a38d-d9fd8e00ca8e">
 
 ---
